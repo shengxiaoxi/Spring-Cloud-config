@@ -1,0 +1,30 @@
+server:
+  port: 8180
+
+
+spring:
+  application:
+    name: msc-consumer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8000.com:8000/eureka
+#      defaultZone: http://eureka8000.com:8000/eureka,http://eureka8001.com:8001/eureka,http://eureka8002.com:8002/eureka
+  instance:
+    metadata-map:
+      host-mark: gray-host
+
+# 开启Feign对Hystrix的支持
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000  # 指定Feign连接提供者的超时时限
+        readTimeout: 5000    # 指定Feign从请求到获取提供者响应的超时时限
+
+test-key: 天下无敌
+
+

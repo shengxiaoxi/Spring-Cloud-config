@@ -1,16 +1,30 @@
-spring:
-  profiles:
-    active: dev
----
-spring:
-  application:
-    name: msc-config-dev
-  profiles: dev
+# spring:
+#   profiles:
+#     active: dev
+# ---
+# spring:
+#   application:
+#     name: msc-config-dev
+#   profiles: dev
 
----
-spring:
-  application:
-    name: msc-config-test
-  profiles: test
+# ---
+# spring:
+#   application:
+#     name: msc-config-test
+#   profiles: test
 
 
+server:
+  port: 8000
+
+eureka:
+  instance:
+    hostname: eureka8000.com   # 指定当前eureka主机的主机名
+  client:
+    # 指定当前Server主机不需要向Eureka Server自己再注册了
+    register-with-eureka: false
+    # 指定当前Server不需要从Eureka Server获取注册表
+    fetch-registry: false
+    # 用于对外暴露服务地址
+    service-url:
+      # defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka

@@ -1,5 +1,5 @@
 server:
-  port: 8000
+  port: 7000
 
 eureka:
   instance:
@@ -11,5 +11,4 @@ eureka:
     fetch-registry: false
     # 用于对外暴露服务地址
     service-url:
-      # defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
-      defaultZone: http://eureka8000.com:8000/eureka,http://eureka8001.com:8001/eureka,http://eureka8002.com:8002/eureka
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka

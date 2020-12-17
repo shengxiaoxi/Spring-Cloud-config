@@ -9,7 +9,7 @@ spring:
 eureka:
   client:
     service-url:
-     defaultZone: http://eureka8000.com:8000/eureka,http://eureka8001.com:8001/eureka,http://eureka8002.com:8002/eureka
+     defaultZone: http://eureka8001.com:8001/eureka
   instance:
     metadata-map:
       host-mark: gray-host
